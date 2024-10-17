@@ -97,3 +97,51 @@ const myFunc = function () {
 // Native objects that are not callable: Just objects.
 // Native/Host objects that are callable: Functions.
 // Host objects that are not callable: Their behavior is implementation-defined, but they are still objects and can't be primitive types like undefined, boolean, number, or string.
+
+
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//                                                  MEMORY DISCUSSION
+
+//Stack is used in (Primitive Type ) and Heap is used in (Non-Primitive Type)
+
+// Here is an example of Non-primitive type , so everything is stored into a stack.
+
+let myYoutubeName = "chanchalrajput"
+let anotherName = myYoutubeName
+anotherName = "cryan booster"
+console.log(myYoutubeName); // chanchalrajput
+console.log(anotherName);  // cryan booster
+
+// In line 110 , we give value of myYoutubeName = chanchalrajput
+// In line 111, we give anotherName = myYoutubeName that means a copy of myYoutubeName 
+// that means chanchalrajput is given into anotherName because everything is stored into a stack.
+// In  stack , value is copied from one variable into another variable . 
+// No two variables, refer to the same value
+// That's why, In 113 line , myYoutubeName = chanchalrajput
+// In 114 line , anotherName = cryan booster because there is an updation only in the anotherName and myYoutubeName's value is not belong
+//  to the updated value of anotherName. Hence, myYoutubeName is not affected from an updation.
+
+
+
+// Here is an example of Non-primitive type , which is stored into Heap Memory
+
+// Here , Variables are stored into a stack but their values are accessed from a heap memory by references.
+
+let userOne = {
+    email: "user@google.com",
+    upi : "user@bl"
+}
+
+let userTwo = userOne
+userTwo.email = "chanchal@google.com"
+
+console.log(userOne.email); // chanchal@google.com
+console.log(userTwo.email); // chanchal@google.com
+
+// Here , both variables values has been changed because they referred to the same value and on updation the value has been changed . That's why , because of referencing the value has been updated.
+
+
+
