@@ -28,8 +28,8 @@ console.log(newStringOne.trim());
 
 const url = "https://hitesh.com/hitesh%20choudhary"
 
-console.log(url.replace('%20', '-'))
+console.log(url.replace('%20', '-')) //https://hitesh.com/hitesh-choudhary
 
-console.log(url.includes('sundar'))
+console.log(url.includes('sundar')) // false
 
 console.log(gameName.split('-'));
