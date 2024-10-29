@@ -17,19 +17,23 @@ const user = {
 
 // function chai(){
 //     let username = "hitesh"
-//     console.log(this.username);
+//     console.log(this.username);  // undefined issa hm yha aisa use nhi krskta blki issa aisa object mai use krskta hai
+
 // }
 
 // chai()
 
 // const chai = function () {
 //     let username = "hitesh"
-//     console.log(this.username);
+//     console.log(this.username); // undefined
 // }
 
+
+// Arrow function 
 const chai =  () => {
     let username = "hitesh"
-    console.log(this);
+    console.log(this);  // {}
+    console.log(this.username); // undefined
 }
 
 
@@ -39,14 +43,20 @@ const chai =  () => {
 //     return num1 + num2
 // }
 
-// const addTwo = (num1, num2) =>  num1 + num2
+
+// implicit return mai na toh paranthesis use hota hai or na i return keyword use hota hai. simple ek line ka o/p print krskta hai.
+// Or to avoid confusion we can use () banana brackets to wrap up the single line statement.
+
+const addTwo = (num1, num2) =>  num1 + num2 // implicit return
 
 // const addTwo = (num1, num2) => ( num1 + num2 )
 
-const addTwo = (num1, num2) => ({username: "hitesh"})
+// const addTwo = (num1, num2) => ({username: "hitesh"})  // this is the way to return an object by implicit return.
 
 
-console.log(addTwo(3, 4))
+// Explicit return mai body ko likhta time {} paranthesis ka aandr hi likh skta hai or return keyword use krna compulsory hota hai.
+
+console.log(addTwo(3, 4)) // 7
 
 
 // const myArray = [2, 5, 3, 7, 8]
