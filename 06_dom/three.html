@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    
+</body>
+<script>
+    const myDiv = document.createElement('div');
+    console.log(myDiv);
+    myDiv.className = "main"
+    myDiv.id="myId"
+    myDiv.id=Math.random()*10
+    myDiv.setAttribute("title","Generated Title");
+    myDiv.style.backgroundColor = "Orange"
+    myDiv.style.padding = "12px"
+    // myDiv.innerText = "Chanchal Rajput"
+    const addText = document.createTextNode("Chai aur Code")
+    myDiv.appendChild(addText)
+    // Attaching on Web Page
+    document.body.appendChild(myDiv)
+</script>
+</html>
