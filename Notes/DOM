@@ -1,0 +1,2 @@
+To select an element by Id.
+-> document.getElementById('title')
